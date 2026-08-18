@@ -21,3 +21,14 @@ User → entity
 Order → entity
 places → relationship
 ```
+```text
+USER
+├── user_id
+├── name
+└── email
+
+ORDER
+├── order_id
+├── date
+└── amount
+```
