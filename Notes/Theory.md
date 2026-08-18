@@ -11,13 +11,13 @@ Formally: a DBMS sits between the physical storage (disk) and the user/applicati
 
 Before DBMS, data was stored in flat files managed directly by each program. This caused:
 
-Data redundancy — same data duplicated across multiple files/programs, wasting space and risking inconsistency
-Data inconsistency — updating data in one file but forgetting another, so the same fact has two different values somewhere
-Difficulty in accessing data — no query language, every access pattern needed custom code
-Data isolation — data scattered in different formats across files, hard to combine
-Integrity problems — no built-in way to enforce rules (e.g. "age must be positive," "email must be unique")
-Atomicity/concurrency problems — multiple users/programs modifying data simultaneously could corrupt it, with no safeguard
-Security problems — no fine-grained control over who can read/write what
+- Data redundancy — same data duplicated across multiple files/programs, wasting space and risking inconsistency
+- Data inconsistency — updating data in one file but forgetting another, so the same fact has two different values somewhere
+- Difficulty in accessing data — no query language, every access pattern needed custom code
+- Data isolation — data scattered in different formats across files, hard to combine
+- Integrity problems — no built-in way to enforce rules (e.g. "age must be positive," "email must be unique")
+- Atomicity/concurrency problems — multiple users/programs modifying data simultaneously could corrupt it, with no safeguard
+- Security problems — no fine-grained control over who can read/write what
 
 A DBMS solves all of these by centralizing data management with formal rules, a query language, and built-in mechanisms for integrity, concurrency, and security.
 
