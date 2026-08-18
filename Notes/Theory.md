@@ -21,6 +21,44 @@ Before DBMS, data was stored in flat files managed directly by each program. Thi
 
 A DBMS solves all of these by centralizing data management with formal rules, a query language, and built-in mechanisms for integrity, concurrency, and security.
 
+A DBMS (Database Management System) was created to provide software that makes it easier, safer, and more efficient to store, retrieve, update, and manage large amounts of data.
+
+Before DBMSs, applications could manage data directly using separate files:
+
+Application
+    ↓
+Files on disk
+
+This created problems such as:
+
+Data duplication
+Difficult data searching
+Inconsistent data
+Poor sharing between applications
+Weak security
+Difficult backup/recovery
+Problems when multiple users access data simultaneously
+
+A DBMS provides a layer between the application and the stored data:
+```text
+Application
+     ↓
+    DBMS
+     ↓
+Database
+     ↓
+Storage
+```
+The application can say:
+```sql
+SELECT * FROM users WHERE age > 20;
+```
+and the DBMS handles the complicated work of finding, retrieving, and returning the data.
+
+So your understanding is correct:
+
+DBMS = software designed to efficiently and reliably manage data and provide controlled access to that data.
+
 ---
 
 ### When and where to use it (Purpose)
