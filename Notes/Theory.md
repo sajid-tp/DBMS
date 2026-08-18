@@ -40,22 +40,22 @@ Applications connect to the DBMS via a driver/client library (e.g. Mongoose for 
 ---
 ### Advantages
 
-Reduces data redundancy and inconsistency
-Enforces integrity constraints (keys, uniqueness, data types)
-Supports concurrent access safely (via transactions, locking)
-Provides backup and recovery mechanisms
-Centralized security/access control
-Standardized query language reduces custom code
-Data independence — application code doesn't need to change if the underlying storage structure changes
+- Reduces data redundancy and inconsistency
+- Enforces integrity constraints (keys, uniqueness, data types)
+- Supports concurrent access safely (via transactions, locking)
+- Provides backup and recovery mechanisms
+- Centralized security/access control
+- Standardized query language reduces custom code
+- Data independence — application code doesn't need to change if the underlying storage structure changes
 
 ---
 ### Disadvantages
 
-Added complexity — requires learning the DBMS and its query language
-Cost — licensing (for some DBMS), infrastructure, and skilled personnel
-Performance overhead compared to raw file access, for simple use-cases
-Requires careful design (poor schema design can cause serious performance and integrity problems)
-Single point of failure if not properly configured with backups/replication
+- Added complexity — requires learning the DBMS and its query language
+- Cost — licensing (for some DBMS), infrastructure, and skilled personnel
+- Performance overhead compared to raw file access, for simple use-cases
+- Requires careful design (poor schema design can cause serious performance and integrity problems)
+- Single point of failure if not properly configured with backups/replication
 
 ---
 ### What changes does it make in the program?
