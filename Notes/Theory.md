@@ -67,4 +67,4 @@ Data validation partially moves into the DBMS itself (constraints, types)
 The program becomes dependent on a connection to the DBMS (via a driver — e.g. Mongoose) rather than direct file I/O
 Code becomes more maintainable, since the same query interface works regardless of how data is physically stored underneath
 
----
+
