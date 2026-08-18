@@ -5,6 +5,7 @@
 A DBMS is a software system that allows creation, storage, retrieval, modification, and deletion of data in a structured, controlled, and reliable way, while enforcing rules (like the relational model's constraints) to maintain data integrity, consistency, and security — without requiring the application program to manage the raw storage details itself.
 
 Formally: a DBMS sits between the physical storage (disk) and the user/application, providing an abstraction layer so users interact with logical data structures (tables, documents) instead of raw bytes, files, or memory addresses.
+
 ---
 ### Why should we use it? (What problems does it solve?)
 
