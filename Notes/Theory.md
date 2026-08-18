@@ -1,4 +1,4 @@
-#DBMS (Database Management System)
+# DBMS (Database Management System)
 
 ### What is it? (Proper definition)
 
