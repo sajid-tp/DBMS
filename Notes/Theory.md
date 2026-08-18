@@ -21,6 +21,8 @@ Security problems — no fine-grained control over who can read/write what
 
 A DBMS solves all of these by centralizing data management with formal rules, a query language, and built-in mechanisms for integrity, concurrency, and security.
 
+---
+
 ### When and where to use it (Purpose)
 
 Use a DBMS whenever an application needs to persist, query, and reliably manage structured or semi-structured data — essentially any non-trivial application: e-commerce (your stepSelect project), banking, hospital systems, social media, inventory, etc. Not needed for tiny, single-user, throwaway scripts where a flat file or in-memory structure is genuinely sufficient.
