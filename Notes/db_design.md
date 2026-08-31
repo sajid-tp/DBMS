@@ -11,3 +11,15 @@
 3. Whole-document rewrites — MongoDB treats a document as the atomic unit; updating one small nested field still means the database touches/rewrites that entire (possibly large) document, which is slower than updating one small standalone document in a separate collection.
 
 4. Growing complexity of queries as nesting gets deeper — if you ever needed to filter/query based on embedded array contents (e.g. "find all orders containing this specific product"), the query itself gets more complex ($elemMatch, nested $in, etc.) compared to a simple find({ productId }) on a separate collection.
+
+### The decision framework you've landed on:
+
+If an entity/data is small, fixed-size, and always used together with its parent → embed it directly (e.g. shippingAddress inside order — it's small, bounded, and you'd never query addresses independently of their order).
+If an entity can grow large, needs independent querying/updating, or is shared across multiple parents → give it its own collection, and just store a reference (ObjectId) to connect it back (e.g. orderItems, reviews, returns, offers all reference back to orders/products rather than living nested inside them).
+
+- And you're right that this isn't a one-time decision made only at the start — it's something you evaluate per entity, based on:
+
+Will this grow unbounded? (reviews, order items, logs → yes → separate collection)
+Does it need to be queried/updated on its own? (yes → separate collection)
+Is it shared/referenced from multiple other collections? (yes → separate collection, avoid duplication)
+Is it small and permanently tied to one parent, never touched independently? (embed)
